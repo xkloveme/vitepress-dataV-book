@@ -11,8 +11,8 @@
   "main": "src/index.ts",
   "exports": {
     ".": "./src/index.ts",
-    "/theme": "./src/theme.js",
-    "/register": "./src/core/register.js"
+    "./theme": "./src/theme.js",
+    "./register": "./src/core/register.js"
   },
   "files": [
     "src"
