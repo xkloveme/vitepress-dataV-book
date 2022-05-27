@@ -8,9 +8,9 @@
     "vitepress",
     "theme"
   ],
-  "main": "src/index.ts",
+  "main": "src/index.js",
   "exports": {
-    ".": "./src/index.ts",
+    ".": "./src/index.js",
     "./theme": "./src/theme.js",
     "./register": "./src/core/register.js"
   },
