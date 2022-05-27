@@ -1,14 +1,22 @@
 {
-  "name": "vitepress-theme-book",
-  "version": "1.0.1",
+  "name": "tangodata/vitepress-theme-book",
+  "version": "1.0.2",
   "description": "Simple vitepress theme for ebooks",
-  "keywords": [
-    "vitepress",
-    "theme",
-    "markdown"
-  ],
   "author": "tangodata",
   "license": "MIT",
+  "keywords": [
+    "vitepress",
+    "theme"
+  ],
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "/theme": "./src/theme.js",
+    "/register": "./src/core/register.js"
+  },
+  "files": [
+    "src"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tangodata/vitepress-theme-book.git"
@@ -17,7 +25,6 @@
     "url": "https://github.com/tangodata/vitepress-theme-book/issues"
   },
   "homepage": "https://github.com/tangodata/vitepress-theme-book#readme",
-  "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vitepress dev --host 0.0.0.0 test",
