@@ -46,3 +46,5 @@ export { default as VTSocialLinks } from './components/VTSocialLinks.vue'
 export { default as VTSwitch } from './components/VTSwitch.vue'
 export { default as VTSwitchAppearance } from './components/VTSwitchAppearance.vue'
 */
+
+export const xx = []

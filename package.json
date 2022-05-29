@@ -1,5 +1,6 @@
 {
-  "name": "tangodata/vitepress-theme-book",
+  "name": "vitepress-theme-book",
+  "displayName": "Vitepress Book Enhanced",
   "version": "1.0.3",
   "description": "Simple vitepress theme for ebooks",
   "author": "tangodata",
@@ -8,14 +9,17 @@
     "vitepress",
     "theme"
   ],
-  "main": "src/index.js",
+  "type": "module",
+  "main": "src/index.ts",
   "exports": {
-    ".": "./src/index.js",
+    ".": "./src/index.ts",
     "./theme": "./src/theme.js",
-    "./register": "./src/core/register.js"
+    "./register": "./src/core/register.js",
+    "./config": "./src/vitepress/baseConfig.js",
+    "./*": "./src/*"
   },
   "files": [
-    "src"
+    "src", "docs"
   ],
   "repository": {
     "type": "git",
@@ -25,16 +29,14 @@
     "url": "https://github.com/tangodata/vitepress-theme-book/issues"
   },
   "homepage": "https://github.com/tangodata/vitepress-theme-book#readme",
+  "publisher": "tangodata",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vitepress dev --host 0.0.0.0 test",
-    "build": "vitepress build test",
-    "serve": "vitepress serve test"
+    "dev": "vitepress dev docs --host 0.0.0.0 ",
+    "build": "vitepress build docs"
    },
   "dependencies": {
     "axios": "^0.27.2",
-    "pinia": "^2.0.14",
-    "vue": "^3.2.36"
+    "pinia": "^2.0.14"
   },
   "devDependencies": {
     "@originjs/vite-plugin-content": "^1.0.1",
@@ -56,7 +58,9 @@
     "tailwindcss": "^3.0.24",
     "vite-plugin-compress": "^2.1.1",
     "vite-plugin-radar": "^0.4.2",
-    "vitepress": "^0.22.4"
+    "vitepress": "^0.22.4",
+    "vite": "^2.9.9",
+    "vue": "^3.2.36"
   },
   "pnpm": {
     "peerDependencyRules": {
