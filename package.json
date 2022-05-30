@@ -10,11 +10,12 @@
     "theme"
   ],
   "xtype": "module",
-  "main": "src/index.ts",
+  "main": "src/dark/index.js",
   "exports": {
     ".": "./src/index.ts",
     "./node": "./src/node/index.ts",
     "./client": "./src/client/index.ts",
+    "./dark": "./src/dark/index.js",
     "./*": "./src/*"
   },
   "files": [
