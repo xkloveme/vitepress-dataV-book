@@ -13,9 +13,8 @@
   "main": "src/index.ts",
   "exports": {
     ".": "./src/index.ts",
-    "./theme": "./src/theme.js",
-    "./register": "./src/core/register.js",
-    "./config": "./src/vitepress/baseConfig.js",
+    "./node": "./src/node/index.ts",
+    "./client": "./src/client/index.ts",
     "./*": "./src/*"
   },
   "files": [
