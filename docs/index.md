@@ -5,8 +5,9 @@ heroText: Rapidly build modern websites without ever leaving your HTML.
 tagline: A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.
 heroAlt: Logo image
 actionText: Start Reading
-actionLink: /alice-00
-heroImage: https://api.lorem.space/image/fashion?w=1000&h=800
+actionLink: /about
+heroImage: /bk.png
+sss: https://api.lorem.space/image/fashion?w=1000&h=800
 
 
 features:

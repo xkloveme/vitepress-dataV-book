@@ -9,7 +9,7 @@
     "vitepress",
     "theme"
   ],
-  "type": "module",
+  "xtype": "module",
   "main": "src/index.ts",
   "exports": {
     ".": "./src/index.ts",
@@ -19,7 +19,8 @@
     "./*": "./src/*"
   },
   "files": [
-    "src", "docs"
+    "src",
+    "docs"
   ],
   "repository": {
     "type": "git",
@@ -33,7 +34,7 @@
   "scripts": {
     "dev": "vitepress dev docs --host 0.0.0.0 ",
     "build": "vitepress build docs"
-   },
+  },
   "dependencies": {
     "axios": "^0.27.2",
     "pinia": "^2.0.14"
@@ -56,11 +57,12 @@
     "pug": "^3.0.2",
     "sass": "^1.52.1",
     "tailwindcss": "^3.0.24",
+    "vite": "^2.9.9",
     "vite-plugin-compress": "^2.1.1",
     "vite-plugin-radar": "^0.4.2",
     "vitepress": "^0.22.4",
-    "vite": "^2.9.9",
-    "vue": "^3.2.36"
+    "vue": "^3.2.36",
+    "vue-sfc-rollup": "^4.1.1"
   },
   "pnpm": {
     "peerDependencyRules": {

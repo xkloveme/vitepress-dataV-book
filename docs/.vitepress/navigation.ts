@@ -1,40 +1,37 @@
 export const nav = [
   {
-    text: 'Alice Book',
-    link: '/alice-00',
+    text: 'Theme Info',
+    link: '/guide/index',
   },
   {
-    text: 'Theme Info',
-    items: [
-      { text: 'Sandbox',
-        link: '/sandbox',
-      },
-      { text: 'About',
-        link: '/about',
-      },
-      {
-        text: 'Home',
-        link: '/index',
-      },
-    ],
+    text: 'Alice Book',
+    link: '/alice/alice-00',
   },
 ]
 
 export const sidebar = [
   {
-    "text": "Documentation",
+    "text": "Theme Info",
     "children": [
       {
-        "text": "Home",
-        "link": "/index"
+        "text": "Guide",
+        "link": "/guide/index"
+      },
+      {
+        "text": "Usage",
+        "link": "/guide/usage"
+      },
+      {
+        "text": "Demo",
+        "link": "/demo/index"
+      },
+      {
+        "text": "Sandbox",
+        "link": "/demo/sandbox"
       },
       {
         "text": "About",
         "link": "/about"
-      },
-      {
-        "text": "Sandbox",
-        "link": "/sandbox"
       },
     ],
   },
@@ -43,59 +40,59 @@ export const sidebar = [
     "children": [
       {
         "text": "Frontispiece",
-        "link": "/alice-00"
+        "link": "/alice/alice-00"
       },
       {
         "text": "I. Down the Rabbit-Hole",
-        "link": "/alice-01"
+        "link": "/alice/alice-01"
       },
       {
         "text": "II. The Pool of Tears",
-        "link": "/alice-02"
+        "link": "/alice/alice-02"
       },
       {
         "text": "III. A Caucus-Race and a Long Tale",
-        "link": "/alice-03"
+        "link": "/alice/alice-03"
       },
       {
         "text": "VI. The Rabbit Sends in a Little Bill",
-        "link": "/alice-04"
+        "link": "/alice/alice-04"
       },
       {
         "text": "V. Advice fom a Caterpillar",
-        "link": "/alice-05"
+        "link": "/alice/alice-05"
       },
       {
         "text": "VI. Pig and Pepper",
-        "link": "/alice-06"
+        "link": "/alice/alice-06"
       },
       {
         "text": "VII. A Mad Tea-Party",
-        "link": "/alice-07"
+        "link": "/alice/alice-07"
       },
       {
         "text": "VIII. The Queen's Croquet-Ground",
-        "link": "/alice-08"
+        "link": "/alice/alice-08"
       },
       {
         "text": "IX. The Mock Turtle's Story",
-        "link": "/alice-09"
+        "link": "/alice/alice-09"
       },
       {
         "text": "X. The Lobster Quadrille",
-        "link": "/alice-10"
+        "link": "/alice/alice-10"
       },
       {
         "text": "XI. Who Stole the Tarts?",
-        "link": "/alice-11"
+        "link": "/alice/alice-11"
       },
       {
         "text": "XII. Alice's Evidence",
-        "link": "/alice-12"
+        "link": "/alice/alice-12"
       },
       {
         "text": "Epigraph",
-        "link": "/alice-99"
+        "link": "/alice/alice-99"
       },
     ],
   },
