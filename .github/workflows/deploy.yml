@@ -16,7 +16,7 @@ jobs:
       with:
         # persist-credentials: false
         #fetch-depth: 2
-        #submodules: true
+        submodules: true
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
