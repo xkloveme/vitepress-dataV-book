@@ -2,7 +2,7 @@ name: Vitepress Deploy
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
 jobs:
   build:
