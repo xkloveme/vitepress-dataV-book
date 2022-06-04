@@ -123,6 +123,8 @@ module.exports = function plugin(md, options) {
     return `<!-- EPILOG -->\n`
   }
 
+  //console.log('Entering MD-HINT')
+
   ////////////////////////////////////////////
   //Vitepress
   //src/node/markdown/plugins/component.ts detects html_blocks
@@ -134,4 +136,6 @@ module.exports = function plugin(md, options) {
   //epilog hooks to the end of main parse,
   md.core.ruler.after('inline', 'epilog', _epilog_hook)
   md.renderer.rules.epilog_token = _epilog_render;
-};
+
+  console.log('MD-HINT Activated')
+}

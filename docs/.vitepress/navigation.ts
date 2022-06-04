@@ -1,10 +1,10 @@
 export const nav = [
   {
-    text: 'Theme Info',
-    link: '/guide/index',
+    text: 'Guide',
+    link: '/guide/',
   },
   {
-    text: 'Alice Book',
+    text: 'Sample Book',
     link: '/alice/alice-00',
   },
 ]
@@ -12,10 +12,10 @@ export const nav = [
 export const sidebar = [
   {
     "text": "Theme Info",
-    "children": [
+    "items": [
       {
         "text": "Guide",
-        "link": "/guide/index"
+        "link": "/guide/"
       },
       {
         "text": "Usage",
@@ -23,7 +23,7 @@ export const sidebar = [
       },
       {
         "text": "Demo",
-        "link": "/demo/index"
+        "link": "/demo/"
       },
       {
         "text": "Sandbox",
@@ -37,7 +37,7 @@ export const sidebar = [
   },
   {
     "text": "Alice's Adventures in Wonderland",
-    "children": [
+    "items": [
       {
         "text": "Frontispiece",
         "link": "/alice/alice-00"
@@ -97,3 +97,16 @@ export const sidebar = [
     ],
   },
 ]
+
+
+export const socialLink = [
+  {
+    icon: 'github',
+    link: 'https://github.com/tangodata/vitepress-theme-book',
+  },
+]
+
+export const footer = {
+  message: 'Released under the MIT License.',
+  copyright: 'Copyright © 2022 Tangueros.org'
+}

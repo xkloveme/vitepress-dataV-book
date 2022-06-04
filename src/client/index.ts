@@ -1,7 +1,8 @@
 // this file has code to be used "client or SSG" side Vue/SFC
 
+import './tailwind.css'
 import myLayout from './Layout.vue'
-import defaultTheme from 'vitepress/dist/client/theme-default'
+import defaultTheme from 'vitepress/client/theme-default'
 //import { appendFile } from 'fs'
 
 export const vptheme = (callback)=>{
@@ -30,3 +31,4 @@ function register(app, components) {
   // install data stores from app/stores/
   //app.use(stores)
 }
+
