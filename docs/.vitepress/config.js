@@ -13,7 +13,9 @@ const baseconfig = vpconfig(contentdir)
 export default defineConfig({
   ...baseconfig,
 
-  base: "/",
+  outDir: "../dist",
+  base: "/vitepress-theme-book/",
+
   title: "Vitepress-Theme-Book",
   description: "Vitepress-powered",
   lang: 'en-us',
