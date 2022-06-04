@@ -76,11 +76,11 @@ Markdown-it
 - ... other markdown syntax
 - container (custom blocks)
 - emoji
-- 
+-
 - code (prism)
 - css = code, custom-blocks
 - Embed = Youtube, FBsocial plugin, audio/podcast, videojs/shuttle
-- 
+-
 
 
 Third Parties Layout functions
@@ -126,7 +126,7 @@ Vue/Vite enhanced
 - vite alias (~/)
 - (permalink)
 - (layout component)
- 
+
 
 ---
 **One Vitepress Repo**
@@ -147,7 +147,7 @@ tspore.gitlab.io
 = info.tangosingapore.com
 tangosingapore.com
 
-tangosingapore.com/practicafit 
+tangosingapore.com/practicafit
 tspore.gitlab.io/practicafit
 =https://gitlab.com/tspore/practicafit
 
@@ -169,3 +169,78 @@ https://tspore.gitlab.io/project-gofest
 https://tspore.gitlab.io/homepage
 
 
+
+
+
+
+
+
+---
+### Deployment
+https://vitejs.dev/guide/static-deploy.html
+
+_Gitlab_
+
+.gitlab-ci.yml
+
+~~~
+image: node:16.5.0
+pages:
+  stage: deploy
+  cache:
+    key:
+      files:
+        - package-lock.json
+      prefix: npm
+    paths:
+      - node_modules/
+  script:
+    - npm install
+    - npm run build
+    - cp -a dist/. public/
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+~~~
+
+_Github_
+
+.github/workflows/deploy.yml
+
+
+~~~
+name: Vitepress Deploy
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+
+    - run: npm ci
+
+    - run: npm run build --if-present
+
+    - name: Publish to gh-pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
+~~~

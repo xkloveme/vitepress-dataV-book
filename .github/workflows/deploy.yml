@@ -1,0 +1,43 @@
+name: Vitepress Deploy
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        # persist-credentials: false
+        #fetch-depth: 2
+        #submodules: true
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+
+    - run: npm ci
+
+    - name: Build Site 🔧
+      run: npm run build --if-present
+
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@3.7.1
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: docs/.vitepress/dist
+        CLEAN: true
+        COMMIT_MESSAGE: 'Publishing'
+      #uses: peaceiris/actions-gh-pages@v3
+      #with:
+      #  github_token: ${{ secrets.GITHUB_TOKEN }}
+      #  publish_dir: ./dist
