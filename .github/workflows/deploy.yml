@@ -7,10 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
-
     steps:
     - uses: actions/checkout@v3
       with:
@@ -18,16 +14,20 @@ jobs:
         #fetch-depth: 2
         submodules: true
 
+    - uses: pnpm/action-setup@v2
+      with:
+        version: 7.1.2
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: '16'
         cache: 'pnpm'
 
-    - run: pnpm ci
+    - run: pnpm install --frozen-lockfile
 
     - name: Build Site 🔧
-      run: pnpm run build --if-present
+      run: npm run build --if-present
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@3.7.1
