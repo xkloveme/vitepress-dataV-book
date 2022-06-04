@@ -2,7 +2,7 @@
 layout: home
 
 heroAlt: Logo image
-heroImage: /bk.png
+heroImage: ./bk.png
 sss: https://api.lorem.space/image/fashion?w=1000&h=800
 
 hero:
@@ -12,10 +12,10 @@ hero:
   actions:
   - theme: brand
     text: Start Reading
-    link: /guide/
+    link: ./guide/
   - theme: alt
     text: Alice
-    link: /alice/alice-00
+    link: ./alice/alice-00
 
 
 

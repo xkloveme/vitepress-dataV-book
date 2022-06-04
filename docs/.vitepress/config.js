@@ -1,20 +1,18 @@
-import { nav, sidebar, socialLink, footer, } from './navigation'
 import { defineConfig } from "vitepress"
-
-
+import { nav, sidebar, socialLink, footer, } from './navigation'
 import path from "path"
 const contentdir = `${path.resolve(__dirname, "..")}/`
-
-
-
 import { vpconfig } from  "../../src/node"
 const baseconfig = vpconfig(contentdir)
+
+const base = '/vitepress-theme-book/'
+const logo = base+"bk.png"
 
 export default defineConfig({
   ...baseconfig,
 
   outDir: "../dist",
-  base: "/vitepress-theme-book/",
+  base,
 
   title: "Vitepress-Theme-Book",
   description: "Vitepress-powered",
@@ -24,13 +22,19 @@ export default defineConfig({
     // "public/**/*",
     "/**/_*/*",
   ],
+  lastUpdated: false,
 
   themeConfig: {
-    logo: "/bk.png",
     nav,
     sidebar,
     socialLink,
     footer,
+    logo,
+    editLink: {
+      repo: 'tangodata/vitepress-theme-book',
+      dir: 'docs',
+      text: 'Edit this page on GitHub',
+    },
   }
 
 /*

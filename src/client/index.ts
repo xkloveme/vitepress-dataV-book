@@ -20,10 +20,11 @@ export const vptheme = (callback)=>{
 
 
 /* Register components */
-function register(app, components) {
+export function register(app, components) {
   // install auto components under app/modules/
   Object.entries(components).forEach(([path, definition]) => {
     const _componentName = path.split('/').pop().replace(/\.\w+$/, '')
+    console.log('Register Component [',_componentName,']')
     app.component(_componentName, definition.default)
   })
   // install runtime Dyn component
@@ -32,3 +33,16 @@ function register(app, components) {
   //app.use(stores)
 }
 
+
+/*
+function register(app, components) {
+  Object.entries(components)
+  .forEach(
+    ([path, definition]) => {
+      const _compoName = path.split('/').pop().replace(/\.\w+$/, '')
+      console.log('Register Component [',_compoName,']')
+      app.component(_compoName, definition.default)
+    }
+  )
+}
+*/

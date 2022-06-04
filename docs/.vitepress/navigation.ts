@@ -12,6 +12,7 @@ export const nav = [
 export const sidebar = [
   {
     "text": "Theme Info",
+    "collapsible": true,
     "items": [
       {
         "text": "Guide",
@@ -37,6 +38,7 @@ export const sidebar = [
   },
   {
     "text": "Alice's Adventures in Wonderland",
+    "collapsible": true,
     "items": [
       {
         "text": "Frontispiece",
