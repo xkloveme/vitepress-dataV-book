@@ -34,7 +34,7 @@ jobs:
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: docs/.vitepress/dist
+        FOLDER: dist
         CLEAN: true
         COMMIT_MESSAGE: 'Publishing'
       #uses: peaceiris/actions-gh-pages@v3
