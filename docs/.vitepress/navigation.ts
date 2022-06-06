@@ -1,6 +1,6 @@
 export const nav = [
   {
-    text: 'Guide',
+    text: 'Theme Info',
     link: '/guide/',
   },
   {
@@ -15,24 +15,24 @@ export const sidebar = [
     "collapsible": true,
     "items": [
       {
-        "text": "Guide",
+        "text": "About",
         "link": "/guide/"
       },
       {
-        "text": "Usage",
-        "link": "/guide/usage"
+        "text": "Guide",
+        "link": "/guide/guide"
       },
       {
-        "text": "Demo",
-        "link": "/demo/"
+        "text": "Modifications",
+        "link": "/guide/mods"
       },
       {
-        "text": "Sandbox",
-        "link": "/demo/sandbox"
+        "text": "Demo 1 Markdown",
+        "link": "/guide/demo1"
       },
       {
-        "text": "About",
-        "link": "/about"
+        "text": "Demo 2 Custom Vue",
+        "link": "/guide/demo2"
       },
     ],
   },
@@ -101,14 +101,3 @@ export const sidebar = [
 ]
 
 
-export const socialLink = [
-  {
-    icon: 'github',
-    link: 'https://github.com/tangodata/vitepress-theme-book',
-  },
-]
-
-export const footer = {
-  message: 'Released under the MIT License.',
-  copyright: 'Copyright © 2022 Tangueros.org'
-}

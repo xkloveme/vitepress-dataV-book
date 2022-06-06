@@ -1,54 +1,35 @@
 ---
-sidebar: 5
 ---
 
-# 使用
+# About Vitepress-Theme-Book
 
-## 安装
+This theme is used for Tangodata's online books and documentations.
 
-More info see [VitePress Docs](https://vitepress.vuejs.org/).
+It is based on Vitepress 1.0.0-alpha
 
-```bash
-pnpm add vitepress-theme-you
-```
+## Frameworks
 
-在 `.vitepress/theme/index.ts` 中引入。
+Core technolgies:
+- Node (Javascript)
+- Vite
+- Vue 3
+- Vitepress
+- Markdown-it
+- Pug
 
-```ts
-// docs/.vitepress/theme/index.ts
-import type { Theme } from 'vitepress'
-import { VPTheme } from 'vitepress-theme-you'
+Styling:
+- Sass
+- TailwindCSS
+   - Tailwind Typography
+   - Daisy UI
+- Google Fonts
+- Font Awesome Icons
 
-// https://github.com/antfu/unocss
-import 'uno.css'
+Markdown Extensions:
+- deflist
+- footnotes
+- container
+- toc
+- attr
 
-const theme: Theme = {
-  ...VPTheme,
-  enhanceApp: ({ app }) => {},
-}
 
-export default theme
-```
-
-配置 `.vitepress/config.ts`。
-
-> 因为使用 unocss 来动态生成 CSS 图标。
-
-```ts
-import type { UserConfig } from 'vitepress'
-import baseConfig from 'vitepress-theme-you/config'
-
-const config: UserConfig = {
-  extends: baseConfig,
-  title: 'You',
-  themeConfig: {
-    // ...
-  }
-}
-
-export default config
-```
-
-## More info
-
-...

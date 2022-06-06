@@ -11,7 +11,7 @@ hero:
     and other goodies.
   actions:
   - theme: brand
-    text: Start Reading
+    text: Guide
     link: ./guide/
   - theme: alt
     text: Alice

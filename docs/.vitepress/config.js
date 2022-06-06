@@ -1,28 +1,35 @@
-import { defineConfig } from "vitepress"
-import { nav, sidebar, socialLink, footer, } from './navigation'
 import path from "path"
-const contentdir = `${path.resolve(__dirname, "..")}/`
+import { defineConfig } from "vitepress"
+import { nav, sidebar,  } from './navigation'
+import { head, socialLink, footer, } from './meta'
 import { vpconfig } from  "../../src/node"
-const baseconfig = vpconfig(contentdir)
 
+//----------------------
+const repo = 'tangodata/vitepress-theme-book'
 const base = '/vitepress-theme-book/'
 const logo = base+"bk.png"
+const title = "Vitepress-Theme-Book"
+const description = "Vitepress-powered"
+//----------------------
+const outDir = "../dist"
+const baseconfig = vpconfig(`${path.resolve(__dirname, "..")}/`)
+//----------------------
 
 export default defineConfig({
   ...baseconfig,
 
-  outDir: "../dist",
-  base,
-
-  title: "Vitepress-Theme-Book",
-  description: "Vitepress-powered",
-  lang: 'en-us',
   srcExclude: [
-    // "components/**/*",
-    // "public/**/*",
+    "components/**/*",
+    "public/**/*",
     "/**/_*/*",
   ],
+  lang: 'en-us',
   lastUpdated: false,
+  title,
+  description,
+  outDir,
+  base,
+  head,
 
   themeConfig: {
     nav,
@@ -31,20 +38,11 @@ export default defineConfig({
     footer,
     logo,
     editLink: {
-      repo: 'tangodata/vitepress-theme-book',
+      repo,
+      branch: 'main',
       dir: 'docs',
-      text: 'Edit this page on GitHub',
+      //text: 'Edit this page on GitHub',
     },
   }
-
-/*
-    repo: "tangodata/vitepress-theme-book",
-    iconClass: "i-ri-layout-3-line",
-    docsDir: "docs",
-    docsBranch: "main",
-    docsRepo: "tangodata/vitepress-theme-book",
-    editLinks: true,
-*/
-
 
 })
