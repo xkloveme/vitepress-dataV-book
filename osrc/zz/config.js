@@ -11,20 +11,20 @@ const baseconfig = vpconfig(contentdir)
 export default defineConfig({
   ...baseconfig,
   base: "/",
-  title: "Vitepress-Theme-Book",
-  description: "vitepress theme book",
+  title: "dataV",
+  description: "dataV上手指南",
   srcExclude: [
     "components/**/*",
     "public/**/*",
     "/**/_*/*"
   ],
   themeConfig: {
-    repo: "tangodata/vitepress-theme-book",
+    repo: "xkloveme/vitepress-dataV-book",
     logo: "/bk.png",
     iconClass: "i-ri-layout-3-line",
     docsDir: "docs",
     docsBranch: "main",
-    docsRepo: "tangodata/vitepress-theme-book",
+    docsRepo: "xkloveme/vitepress-dataV-book",
     editLinks: true,
     nav,
     sidebar

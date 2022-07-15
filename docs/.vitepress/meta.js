@@ -8,11 +8,11 @@ export const head =  [
 export const socialLink = [
   {
     icon: 'github',
-    link: 'https://github.com/tangodata/vitepress-theme-book',
+    link: 'https://github.com/xkloveme/vitepress-dataV-book',
   },
 ]
 
 export const footer = {
   message: 'Released under the MIT License.',
-  copyright: 'Copyright © 2022 Tangueros.org'
+  copyright: 'Copyright © 2022 xkloveme'
 }

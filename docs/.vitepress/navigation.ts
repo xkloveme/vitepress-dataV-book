@@ -1,48 +1,32 @@
 export const nav = [
   {
-    text: 'Theme Info',
+    text: '指南信息',
     link: '/guide/',
   },
   {
-    text: 'Sample Book',
-    link: '/alice/alice-00',
+    text: '阅读',
+    link: '/dataV/index',
   },
 ]
 
 export const sidebar = [
   {
-    "text": "Theme Info",
+    "text": "指南信息",
     "collapsible": true,
     "items": [
       {
-        "text": "About",
+        "text": "关于",
         "link": "/guide/"
-      },
-      {
-        "text": "Guide",
-        "link": "/guide/guide"
-      },
-      {
-        "text": "Modifications",
-        "link": "/guide/mods"
-      },
-      {
-        "text": "Demo 1 Markdown",
-        "link": "/guide/demo1"
-      },
-      {
-        "text": "Demo 2 Custom Vue",
-        "link": "/guide/demo2"
       },
     ],
   },
   {
-    "text": "Alice's Adventures in Wonderland",
+    "text": "阅读",
     "collapsible": true,
     "items": [
       {
-        "text": "Frontispiece",
-        "link": "/alice/alice-00"
+        "text": "什么是大屏",
+        "link": "/dataV/index"
       },
       {
         "text": "I. Down the Rabbit-Hole",
@@ -99,5 +83,3 @@ export const sidebar = [
     ],
   },
 ]
-
-

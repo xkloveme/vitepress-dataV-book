@@ -6,34 +6,31 @@ heroImage: ./bk.png
 sss: https://api.lorem.space/image/fashion?w=1000&h=800
 
 hero:
-  text: Vitepress 1.0.0 Book Theme
-  tagline: Extended with multiple hoisting, markdown plugins,
-    and other goodies.
+  text: 前端大屏开发指南
+  tagline: 最全的前端开发指南,巨屏、大屏轻松上手
   actions:
   - theme: brand
-    text: Guide
+    text: 起步
     link: ./guide/
   - theme: alt
-    text: Alice
+    text: 阅读
     link: ./alice/alice-00
 
 
 
 features:
 - icon:
-  title: Simplicity First
-  details: Minimal setup with markdown-centered project structure helps you focus on writing.
+  title: 🍳简单清晰
+  details: 结构清晰,语言简练.
 
 - icon:
-  title: Vue-Powered
-  details: Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.
+  title: 👋极易上手
+  details: 轻松上手,图表、折线曲线,炫酷效果
 
 - icon:
-  title: Performant
-  details: VitePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
+  title: 🔥覆盖全面
+  details: 覆盖面广,技术先进
 
-footer: Copyright © 2022 Tango Singapore
+footer: Copyright © 2022 xkloveme
 
 ---
-
-
